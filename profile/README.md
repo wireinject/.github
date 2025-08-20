@@ -26,7 +26,7 @@ This issue breaks CI/CD pipelines for any project that relies on `wire` for code
 The objective of `wireinject/wire` is very specific and limited:
 
 - **We do not aim to add any new features.**
-- Our sole purpose is to **update dependencies with the minimum necessary changes to the `google/wire` source code,** ensuring that it compiles and runs correctly on modern Go toolchains.
+- Our sole purpose is to **update dependencies with the [minimum necessary changes](https://github.com/google/wire/compare/main...wireinject:wire:main?expand=1) to the `google/wire` source code,** ensuring that it compiles and runs correctly on modern Go toolchains.
 
 We are committed to making this fork a stable and reliable drop-in replacement, allowing the community to continue using the `wire` tool seamlessly.
 
