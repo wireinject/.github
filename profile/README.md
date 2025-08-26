@@ -1,6 +1,7 @@
 # wireinject
 
 > Good news! The google/wire project has been unarchived and is now receiving updates again."
+> 
 > Bad news: On August 25, 2025, google/wire was archived again.
 
 `wireinject/wire` is a community project dedicated to maintaining a runnable version of `google/wire`. 
