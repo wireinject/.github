@@ -1,10 +1,10 @@
 # wireinject
 
-> Good news! The google/wire project has been unarchived and is now receiving updates again."
-> 
-> Bad news: On August 25, 2025, google/wire was archived again.
+> The `google/wire` project has been archived — for good this time.
+>
+> After a brief unarchiving period, it was archived again on August 25, 2025, and it is now completely unmaintained.
 
-`wireinject/wire` is a community project dedicated to maintaining a runnable version of `google/wire`. 
+`wireinject/wire` is a community project dedicated to maintaining a runnable version of `google/wire`.
 
 
 
@@ -12,7 +12,7 @@
 
 The original `google/wire` repository has been archived by Google and is no longer maintained. This has led to a critical issue:
 
-With upcoming Go releases (such as Go 1.25), attempting to install `wire` via `go install` fails due to an outdated dependency on `golang.org/x/tools`. The build fails with the following compile error: 
+With upcoming Go releases (such as Go 1.25), attempting to install `wire` via `go install` fails due to an outdated dependency on `golang.org/x/tools`. The build fails with the following compile error:
 
 > [x/tools: v0.8.0 through v0.25.0 (Oct 2024) contain public packages that fail to build with Go 1.25.0 #74462](https://github.com/golang/go/issues/74462)
 
@@ -27,12 +27,16 @@ This issue breaks CI/CD pipelines for any project that relies on `wire` for code
 
 ## Our Goal
 
-The objective of `wireinject/wire` is very specific and limited:
+Now that `google/wire` is permanently unmaintained, `wireinject/wire` takes over its upkeep — but its scope remains deliberately narrow:
 
-- **We do not aim to add any new features.**
-- Our sole purpose is to **update dependencies with the [minimum necessary changes](https://github.com/google/wire/compare/main...wireinject:wire:main?expand=1) to the `google/wire` source code,** ensuring that it compiles and runs correctly on modern Go toolchains.
+- **We fix bugs**, including compatibility problems with new Go toolchains and their dependencies.
+- **We add small, scoped features** when they are clearly useful and low-risk.
+- **We do not overhaul the project.** The core design, public API, and command-line interface stay compatible with `google/wire`.
+- **We do not modify the golden tests** that pin the generated output. The code `wire` produces for existing projects keeps working exactly as before.
 
-We are committed to making this fork a stable and reliable drop-in replacement, allowing the community to continue using the `wire` tool seamlessly.
+Stability comes first: every change is weighed against the risk it poses to existing users. This fork is a drop-in replacement you can rely on, not a moving target.
+
+Bug reports and feature requests are welcome via GitHub issues.
 
 
 
